@@ -13,5 +13,5 @@ pnnx.exe gfpganv1_clean_model.pt inputshape=[1,3,512,512]
 1 Clone repository<br>
 2 Download GFPGANv1.3.pth in root dir of this project<br>
 3 Create folder "pretrained" in root dir of project<br>
-4 Put any jpg file in root dir with name 1.jpg<br>
+4 Put any jpg file 512x512 in root dir with name 1.jpg<br>
 4 Run - Export_GFPGANv1_3_to_ONNX.py to convert pth to pt<br>
