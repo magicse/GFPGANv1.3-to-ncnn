@@ -8,8 +8,6 @@ import onnx
 import onnxruntime as ort
 from onnxsim import simplify
 
-
-#from colorizers import eccv16, siggraph17
 from gfpgan.archs.gfpganv1_clean_arch import GFPGANv1Clean
 
 
