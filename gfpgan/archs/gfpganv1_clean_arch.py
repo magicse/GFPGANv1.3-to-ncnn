@@ -301,6 +301,7 @@ class GFPGANv1Clean(nn.Module):
         style_code = self.final_linear(feat.view(feat.size(0), -1))
         if self.different_w:
             style_code = style_code.view(style_code.size(0), -1, self.num_style_feat)
+        style_code2 = style_code.view(style_code.size(0), -1, self.num_style_feat)
 
         # decode
         for i in range(self.log_size - 2):
@@ -328,4 +329,4 @@ class GFPGANv1Clean(nn.Module):
 
         #return image, out_rgbs
         #return out_rgbs, out_scale, out_shift, style_code
-        return out_rgbs, out_scale, out_shift, style_code
+        return out_rgbs, out_scale, out_shift, style_code, style_code2
