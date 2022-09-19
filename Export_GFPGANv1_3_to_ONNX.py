@@ -72,15 +72,6 @@ def convert_static_GFPGANv1Clean_1_3_onnx():
     onnx.save(model_simp, sim_onnx_path)
     print("export GFPGANv1.3 onnx sim done.")
 
-    # test onnxruntime
-    ort_session = ort.InferenceSession(sim_onnx_path)
-
-    x_numpy = x.cpu().numpy()
-
-    out_ab = ort_session.run(['out_ab'], input_feed={"input": x_numpy})
-
-    print("siggraph17 out_ab[0].shape: ", out_ab[0].shape)
-
 
 if __name__ == "__main__":
     #convert_static_GFPGANv1Clean_1_3_onnx()
