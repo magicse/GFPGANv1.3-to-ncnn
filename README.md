@@ -1,4 +1,4 @@
-# convert-GFPGANv1.3-to-ncnn
+# Convert GFPGANv1.3 to ncnn
 1 Clone repository<br>
 2 Download GFPGANv1.3.pth in root dir of this project<br>
 3 Run - Export_PTH_to_PT_GFPGAN.py to convert pth to pt<br>
@@ -8,3 +8,10 @@
 pnnx.exe gfpganv1_clean_model.pt inputshape=[1,3,512,512]
 ```
 6 Output will be gfpganv1_clean_model.ncnn.param and gfpganv1_clean_model.ncnn.bin<br>
+
+# Convert GFPGANv1.3 to onnx
+1 Clone repository<br>
+2 Download GFPGANv1.3.pth in root dir of this project<br>
+3 Create folder "pretrained" in root dir of project
+4 Put any jpg file in root dir with name 1.jpg
+4 Run - Export_GFPGANv1_3_to_ONNX.py to convert pth to pt<br>
