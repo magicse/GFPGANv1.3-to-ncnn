@@ -41,8 +41,6 @@ model = model.to(device)
 
 # An example input you would normally provide to your model's forward() method.
 example1 = torch.rand(1, 3, 512, 512)
-#example2 = torch.rand(2, 256, 256)
-#example3 = torch.rand(1, 256, 256)
 
 # Use torch.jit.trace to generate a torch.jit.ScriptModule via tracing.
 traced_script_module = torch.jit.trace(model, (example1))
