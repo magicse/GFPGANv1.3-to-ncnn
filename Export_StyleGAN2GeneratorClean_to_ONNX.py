@@ -19,7 +19,7 @@ def convert_static_GFPGANv1Clean_1_3_onnx():
     model_path = 'GFPGANv1.3.pth'
 
     inference_model = StyleGAN2GeneratorClean(
-        out_size=8,
+        out_size=512,
         num_style_feat=512,
         channel_multiplier=2,
         num_mlp=8,
