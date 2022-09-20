@@ -129,7 +129,8 @@ class StyleConv(nn.Module):
         # noise injection
         if noise is None:
             b, _, h, w = out.shape
-            noise = out.new_empty(b, 1, h, w).normal_()
+            #noise = out.new_empty(b, 1, h, w).normal_()
+            noise = torch.randn(b, 1, h, w).cpu()
         out = out + self.weight * noise
         # add bias
         out = out + self.bias
@@ -362,7 +363,8 @@ class StyleGAN2GeneratorClean(nn.Module):
 
         image = skip
 
-        if return_latents:
-            return image, latent
-        else:
-            return image, None
+        #if return_latents:
+        #    return image, latent
+        #else:
+        #    return image, None
+        return image
