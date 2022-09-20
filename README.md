@@ -16,3 +16,7 @@ pnnx.exe gfpganv1_clean_model.pt inputshape=[1,3,512,512]
 3 Create folder "pretrained" in root dir of project<br>
 4 Put any jpg file 512x512 in root dir with name 1.jpg<br>
 4 Run - Export_GFPGANv1_3_to_ONNX.py to convert pth to ONNX<br>
+
+### Convert StyleGAN2 from GFPGANv1.3 to onnx
+1 Create folder "pretrained" in root dir of project<br>
+2 Run Export_StyleGAN2GeneratorClean_to_ONNX.py
