@@ -10,7 +10,6 @@ from onnxsim import simplify
 
 
 #from colorizers import eccv16, siggraph17
-from gfpgan.archs.gfpganv1_clean_arch import GFPGANv1Clean
 from gfpgan.archs.stylegan2_clean_arch import StyleGAN2GeneratorClean
 
 def convert_static_GFPGANv1Clean_1_3_onnx():
@@ -31,7 +30,7 @@ def convert_static_GFPGANv1Clean_1_3_onnx():
         keyname = 'params_ema'
     else:
         keyname = 'params'
-    #inference_model.load_state_dict(loadnet[keyname], strict=True)
+
     inference_model.load_state_dict(loadnet[keyname], strict=False)
     
     
@@ -59,14 +58,6 @@ def convert_static_GFPGANv1Clean_1_3_onnx():
     onnx.save(model_simp, sim_onnx_path)
     print("export StyleGAN2GeneratorClean onnx sim done.")
 
-    # test onnxruntime
-    ort_session = ort.InferenceSession(sim_onnx_path)
-
-    x_numpy = x.cpu().numpy()
-
-    out_ab = ort_session.run(['out_ab'], input_feed={"input": x_numpy})
-
-    print("siggraph17 out_ab[0].shape: ", out_ab[0].shape)
 
 
 if __name__ == "__main__":
