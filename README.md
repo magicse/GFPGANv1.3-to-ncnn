@@ -1,4 +1,5 @@
-# Convert GFPGANv1.3 to ncnn
+### The GFPGAN network consists of two networks. Actually GFPGAN and StyleGAN2
+### Convert GFPGANv1.3 to ncnn
 1 Clone repository<br>
 2 Download GFPGANv1.3.pth in root dir of this project<br>
 3 Run - Export_PTH_to_PT_GFPGAN.py to convert pth to pt<br>
@@ -9,7 +10,7 @@ pnnx.exe gfpganv1_clean_model.pt inputshape=[1,3,512,512]
 ```
 6 Output will be gfpganv1_clean_model.ncnn.param and gfpganv1_clean_model.ncnn.bin<br>
 
-# Convert GFPGANv1.3 to onnx
+### Convert GFPGANv1.3 to onnx
 1 Clone repository<br>
 2 Download GFPGANv1.3.pth in root dir of this project<br>
 3 Create folder "pretrained" in root dir of project<br>
