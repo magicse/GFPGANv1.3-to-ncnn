@@ -18,5 +18,7 @@ pnnx.exe gfpganv1_clean_model.pt inputshape=[1,3,512,512]
 4 Run - Export_GFPGANv1_3_to_ONNX.py to convert pth to ONNX<br>
 
 ### Export StyleGAN2 from GFPGANv1.3 to onnx
-1 Create folder "pretrained" in root dir of project<br>
-2 Run Export_StyleGAN2GeneratorClean_to_ONNX.py
+1 Clone repository<br>
+2 Create folder "pretrained" in root dir of project<br>
+3 Download GFPGANv1.3.pth in root dir of this project<br>
+4 Run Export_StyleGAN2GeneratorClean_to_ONNX.py
